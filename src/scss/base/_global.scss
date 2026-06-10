@@ -139,7 +139,9 @@ button {
   }
 }
 .label {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f2f6fa;
   font-size: 11px;
   color: #2e363e;

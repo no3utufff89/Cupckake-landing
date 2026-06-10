@@ -9,7 +9,7 @@ export function swiperSlider() {
         slidesPerView:1,
         centeredSlides: true,
         spaceBetween: 10,
-        autoHeight: true,
+        autoHeight: false,
         navigation: {
             nextEl: '.slider-btn_next',
             prevEl: '.slider-btn_prev',
@@ -26,7 +26,8 @@ export function swiperSlider() {
             },
             1200: {
                 slidesPerView: 1.5,
-            }
+            },
+
         }
 
     });

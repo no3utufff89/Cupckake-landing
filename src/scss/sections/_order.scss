@@ -36,6 +36,7 @@
   justify-self: center;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   @include tablet {
     flex-direction: row;
     column-gap: 20px;
