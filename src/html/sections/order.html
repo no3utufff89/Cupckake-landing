@@ -1,0 +1,31 @@
+<section class="section order">
+    <div class="container">
+       <div class="order__header">
+           <h2 class="title order__title">
+               Чтобы сделать заказ, укажите ваш телефон
+           </h2>
+           <p class="subtitle order__subtitle">
+               Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания
+           </p>
+       </div>
+        <form action="#" class="order-form">
+            <div class="order-form__input-wrapper">
+                <input name="phone" id="phone" type="tel" placeholder="Номер телефона" class="order-form__input" required>
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#icon-phone_01"></use>
+                </svg>
+            </div>
+
+            <button class="btn action-element order-form__submit-btn" type="submit" >
+                Сделать заказ
+            </button>
+            <fieldset class="order-form__fieldset">
+
+                <input type="checkbox" id="agree" class="order-form__checkbox" required>
+                <label for="agree" class="order-form__agree-label">
+                    Нажамая на кнопку, вы соглашаетесь с <span>условиями обработки персональных данных</span>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+@use 'base/vars';
+@use 'base/reset';
+@use 'base/global';
+@use 'base/fonts';
+@use 'typography';
+@use 'controls/controls';
+@use 'controls/modal';
+//@use 'base/slider';
+@use 'base/slider_1';
+//COMPONENTS
+@use 'base/sections';
+@use 'static/header';
+//NAV
+
+@use 'static/footer';
+@use 'static/ovelay';
+

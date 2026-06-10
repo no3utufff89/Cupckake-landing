@@ -1,0 +1,81 @@
+<!--Hero Section Start-->
+<section class="hero">
+    @@include('../static/header.html')
+    <div class="hero__wrapper">
+        <div class="hero__container">
+            <div class="container">
+                <div class="hero__content">
+            <span class="label">
+                Вкууснейшие
+            </span>
+                    <h1 class="hero__title">
+                        Пирожные и капкейки от 150 ₽/шт. с доставкой по Санкт Петербургу
+                    </h1>
+                    <h2 class="hero__subtitle">
+                        Приготовим за 3 часа в день заказа.
+                        <span class="block">
+                    Доставка на авто в холодильнике.
+               </span>
+                    </h2>
+                    <div class="hero__controls">
+                        <a href="#catalog" class="action-element hero__more-link">
+                            Перейти в каталог
+                        </a>
+                        <p>
+                            9 различных
+                            <span class="block">
+                        видов на выбор
+                    </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="hero__image">
+            <picture>
+                <!-- Для мобилок до 560px -->
+                <source
+                    media="(max-width: 560px)"
+                    srcset="../img/hero-bg-600.webp"
+                    type="image/webp"
+                >
+                <!-- Для планшетов до 768px -->
+                <source
+                    media="(max-width: 768px)"
+                    srcset="../img/hero-bg-800.webp"
+                    type="image/webp"
+                >
+                <!-- Для десктопа от 769px -->
+                <source
+                    media="(min-width: 769px)"
+                    srcset="../img/hero-bg-1200.webp"
+                    type="image/webp"
+                >
+                <!-- Fallback для браузеров без WebP -->
+                <source
+                    media="(max-width: 560px)"
+                    srcset="../img/hero-bg-600.png"
+                >
+                <source
+                    media="(max-width: 768px)"
+                    srcset="../img/hero-bg-800.png"
+                >
+                <source
+                    media="(min-width: 769px)"
+                    srcset="../img/hero-bg-1200.png"
+                >
+                <!-- Сама картинка -->
+                <img
+                    src="../img/hero-bg-1200.png"
+                    alt="hero"
+                    width="600"
+                    height="420"
+                    fetchpriority="high"
+                >
+            </picture>
+        </div>
+
+    </div>
+</section>
+<!--Hero Section End-->

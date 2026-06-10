@@ -1,0 +1,86 @@
+@use '../base/vars' as *;
+.logo-link {
+  display: block;
+  max-width: max-content;
+  &__text {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 143%;
+    color: $white;
+  }
+}
+.address-block {
+  display: block;
+  max-width: max-content;
+  svg {
+    color: $white;
+  }
+  &__link {
+    display: flex;
+    column-gap: 15px;
+  }
+  &__text-content {
+    display: none;
+    @include tablet {
+      display: block;
+      font-size: 12px;
+      line-height: 150%;
+      color: $white;
+    }
+
+
+  }
+}
+.phone-block {
+  display: block;
+  max-width: max-content;
+  &__link {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    color: $white;
+    svg {
+      color: $white;
+    }
+  }
+  &__phone-text {
+    display: none;
+    @include tablet {
+      font-size: 20px;
+      line-height: 152%;
+      font-weight: 700;
+      display: block;
+    }
+
+  }
+  &__subtext {
+    display: none;
+    @include tablet {
+      font-size: 13px;
+      line-height: 150%;
+      justify-self: end;
+      color: $white;
+      display: block;
+    }
+  }
+}
+.action-element {
+  background-color: #fed84c;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 152%;
+  text-align: center;
+  color: #2e363e;
+  transition: $transition;
+  &:hover {
+    background-color: rgb(239 190 12);
+  }
+
+}
+button.action-element {
+  padding: 10px 20px;
+  @include dt {
+    padding: 20px 40px;
+  }
+}

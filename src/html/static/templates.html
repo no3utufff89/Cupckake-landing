@@ -1,0 +1,147 @@
+<!-- Шаблон модалки "Согласие на обработку данных" -->
+<template data-modal-template="consent">
+    <div class="modal">
+        <h3 class="modal__title">Согласие на обработку данных</h3>
+        <div class="modal__body">
+            <p>Я даю согласие на обработку моих персональных данных...</p>
+        </div>
+    </div>
+</template>
+
+<!-- Шаблон модалки "Политика конфиденциальности" -->
+<template data-modal-template="privacy">
+    <div class="modal">
+        <h3 class="modal__title">Политика конфиденциальности</h3>
+        <div class="modal__body">
+            <p>Мы уважаем вашу конфиденциальность</p>
+        </div>
+    </div>
+</template>
+
+<!-- Шаблон модалки "Успешная отправка формы" -->
+<template data-modal-template="success">
+    <div class="modal modal--success">
+        <div class="modal__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22" fill="#4caf50" stroke="white" stroke-width="2"/>
+                <path d="M14 24L21 31L34 17" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h3 class="modal__title">Заказ принят!</h3>
+        <p class="modal__text">
+            Спасибо за заказ! Мы перезвоним вам в ближайшее время.
+        </p>
+    </div>
+</template>
+
+<!-- Шаблон модалки "Форма заказа" -->
+<template data-modal-template="order">
+    <div class="modal order-modal">
+        <div class="order__header">
+            <h3 class="title order__title" style="font-size: 24px;">
+                Чтобы сделать заказ, укажите ваш телефон
+            </h3>
+            <p class="subtitle order__subtitle">
+                Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания
+            </p>
+        </div>
+
+        <form action="#" class="order-form modal-order-form">
+            <div class="order-form__input-wrapper">
+                <input name="phone" type="tel" placeholder="Номер телефона" class="order-form__input" data-phone-mask required>
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#icon-phone_01"></use>
+                </svg>
+            </div>
+
+            <button class="btn action-element order-form__submit-btn" type="submit">
+                Сделать заказ
+            </button>
+
+            <fieldset class="order-form__fieldset">
+                <input type="checkbox" id="agree-modal" class="order-form__checkbox" required>
+                <label for="agree-modal" class="order-form__agree-label">
+                    Нажимая на кнопку, вы соглашаетесь с <span>условиями обработки персональных данных</span>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+</template>
+<!-- Шаблон модалки "Задать вопрос" -->
+<template data-modal-template="question">
+    <div class="modal order-modal">
+        <div class="order__header">
+            <h3 class="title order__title" style="font-size: 24px;">
+                Чтобы задать вопрос, укажите ваш телефон
+            </h3>
+            <p class="subtitle order__subtitle">
+                Мы перезвоним в течении 15 минут
+            </p>
+        </div>
+
+        <form action="#" class="order-form modal-order-form">
+            <div class="order-form__input-wrapper">
+                <input name="phone" type="tel" placeholder="Номер телефона" class="order-form__input" data-phone-mask required>
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#icon-phone_01"></use>
+                </svg>
+            </div>
+
+            <button class="btn action-element order-form__submit-btn" type="submit">
+                Отправить
+            </button>
+
+            <fieldset class="order-form__fieldset">
+                <input type="checkbox" id="agre-modal" class="order-form__checkbox" required>
+                <label for="agre-modal" class="order-form__agree-label">
+                    Нажимая на кнопку, вы соглашаетесь с <span>условиями обработки персональных данных</span>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+</template>
+<!-- Шаблон модалки "Полный отзыв" -->
+<template data-modal-template="review-full">
+    <div class="modal review-modal">
+        <button class="modal-close" data-modal-close>×</button>
+
+        <div class="review-modal__header">
+            <div class="review-modal__author-image">
+                <img src="" alt="" id="modal-author-img">
+            </div>
+            <div class="review-modal__author-info">
+                <h4 class="review-modal__author-name" id="modal-author-name"></h4>
+                <p class="review-modal__author-city" id="modal-author-city"></p>
+            </div>
+        </div>
+
+        <h3 class="review-modal__title" id="modal-review-title"></h3>
+
+        <div class="review-modal__text" id="modal-review-text"></div>
+    </div>
+</template>
+<!--Модалка службы поддержки-->
+<template data-modal-template="support">
+    <div class="modal">
+        <button class="modal-close" data-modal-close>×</button>
+        <h3>Служба поддержки</h3>
+        <p>Телефон: 8 (812) 844-95-49</p>
+        <p>Email: support@sunduk.ru</p>
+    </div>
+</template>
+<!-- Шаблон модалки "Вопрос отправлен" -->
+<template data-modal-template="question-success">
+    <div class="modal modal--success">
+        <button class="modal-close" data-modal-close>×</button>
+        <div class="modal__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22" fill="#4caf50" stroke="white" stroke-width="2"/>
+                <path d="M14 24L21 31L34 17" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h3 class="modal__title">Запрос отправлен!</h3>
+        <p class="modal__text">
+            Спасибо! Мы свяжемся с вами в ближайшее время.
+        </p>
+    </div>
+</template>

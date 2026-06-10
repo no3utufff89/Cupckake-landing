@@ -1,0 +1,169 @@
+/*! CRITICAL:START */
+@use '../base/vars' as *;
+.hero {
+  background: #00040D;
+  background: linear-gradient(40deg, rgba(0, 4, 13, 1) 0%, rgba(0, 4, 13, 1) 50%, rgba(11, 20, 66, 1) 91%);
+  position: relative;
+
+  &:after {
+    //content: "";
+    display: block;
+    width: 100%;
+    height: 120px;
+    background-image: url('images/section-divider.png');
+    background-size: cover;
+    background-position: center bottom -40px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    transform: rotate(180deg);
+    pointer-events: none;
+  }
+
+  // Для очень широких экранов
+  @media (min-width: 1800px) {
+    &:after {
+      min-height: 200px;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: 2200px) {
+    &:after {
+      min-height: 330px;
+      background-position: center bottom;
+    }
+
+}
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: calc(100vh - 70px);
+    overflow: hidden;
+  }
+  &__left-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+   &:before,&:after {
+     content: "";
+     display: block;
+
+     position: absolute;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+   }
+    &:after {
+      bottom: 0;
+      left: -60px;
+      background-image: url('images/leaf.png');
+      width: 200px;
+      height: 200px;
+      transform: rotate(-40deg);
+
+    }
+
+  }
+
+
+&__container {
+  flex: 0 0 100%;
+  z-index: 2;
+}
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    max-width: 400px;
+    height: 100%;
+    justify-content: center;
+    @include dt {
+      max-width: 580px;
+    }
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+   @media screen and (min-width: 560px) {
+     width: 400px;
+     height: 400px;
+     position: absolute;
+     left: 60%;
+     top: 60%;
+     transform: translateY(-50%);
+     display: flex;
+     align-items: center;
+     img {
+       object-fit: cover;
+       max-width: 600px;
+       max-height: 600px;
+     }
+   }
+    @include tablet {
+      height: 600px;
+      width: 600px;
+      position: absolute;
+      left: 55%;
+      top: 50%;
+
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $white;
+    font-size: 24px;
+    line-height: 115%;
+    @include tablet {
+      font-size: 32px;
+    }
+    @include dt {
+      font-size: 48px;
+      line-height: 125%;
+    }
+  }
+  &__subtitle {
+    color: $white;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  @include tablet {
+    font-size: 20px;
+  }
+   @include dt {
+     font-size: 24px;
+     line-height: 143%;
+   }
+  }
+  &__more-link {
+    padding: 15px 15px;
+
+    @media screen and (max-width: 375px)  {
+      font-size: 14px;
+    }
+    @include dt {
+      padding: 30px 50px;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    p {
+      font-size: 15px;
+      line-height: 160%;
+      color: #fff;
+    }
+  }
+
+}
+/*! CRITICAL:END */

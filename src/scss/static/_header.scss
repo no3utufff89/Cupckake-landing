@@ -1,0 +1,35 @@
+@use '../base/vars' as *;
+
+
+.header {
+  height: 70px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #7e868e;
+    opacity: .1;
+  }
+  &>.container {
+    height: 100%;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__controls {
+    display: flex;
+    align-content: center;
+    column-gap: 25px;
+    align-items: center;
+    @include tablet {
+      column-gap: 70px;
+    }
+  }
+}
